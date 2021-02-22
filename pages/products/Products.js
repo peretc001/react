@@ -2,57 +2,52 @@ import React, { Component } from 'react';
 import {StyleSheet, Text, View, Image, FlatList} from 'react-native';
 import fetchData from "../../api/fetchData"
 
-const simpleData = [
-    {
-        id: 1,
-        img: require('../../images/tiny_logo.png'),
-        title: 'Акция 1',
-        body: 'Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. '
-    },
-    {
-        id: 2,
-        img: require('../../images/tiny_logo.png'),
-        title: 'Акция 2',
-        body: 'Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. '
-    },
-    {
-        id: 3,
-        img: require('../../images/tiny_logo.png'),
-        title: 'Акция 3',
-        body: 'Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. '
-    },
-    {
-        id: 4,
-        img: require('../../images/tiny_logo.png'),
-        title: 'Акция 4',
-        body: 'Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. '
-    },
-    {
-        id: 5,
-        img: require('../../images/tiny_logo.png'),
-        title: 'Акция 5',
-        body: 'Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. '
-    }
-];
-
 export class Products extends Component {
-    renderItem1({item}) {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            products: [],
+            isLoading: true
+        };
+    }
+
+    async componentDidMount() {
+        const data = await fetchData.fetchProducts();
+        this.setState({products: data})
+        this.setState({ isLoading: false});
+    }
+
+    productItem = ({item, index}) => {
+        const { count } = this.state;
+
         return (
-            <View style={styles.product}>
-                <Image style={styles.image} source={item.img}></Image>
-                <Text style={styles.name}>{item.title}</Text>
-                <Text style={styles.body}>{item.body}</Text>
+            <View style={[styles.product, { marginBottom: count - 1 === index ? 0 : 20}]}>
+                <View style={styles.wrap}>
+                    <Image style={styles.image} source={{uri: item.img}}/>
+                    <View>
+                        <Text style={styles.name}>{item.title}</Text>
+                        <View style={styles.cost}>
+                            <Text style={styles.price}>{item.price}</Text>
+                            <Text style={styles.currency}>{item.currency}.</Text>
+                        </View>
+                    </View>
+                </View>
+                <Text style={styles.body}>{item.body.slice(0, 100)}</Text>
+
             </View>
         );
     }
 
     render() {
+        const { isLoading, products  } = this.state;
+
         return (
             <FlatList
                 style={styles.products}
-                data={simpleData}
+                data={products}
                 keyExtractor={(item) => item.id.toString()}
-                renderItem={this.renderItem1}
+                renderItem={this.productItem}
                 showsVerticalScrollIndicator={false}
                 showsHorizontalScrollIndicator={false}
             />
@@ -74,18 +69,37 @@ const styles = StyleSheet.create({
         flexDirection: 'column',
         marginBottom: 20
     },
-    image: {
-      width: 50,
-      height: 50,
-        marginBottom: 20
-    },
-    name: {
-        fontSize: 18,
-        fontWeight: 'bold',
+    wrap: {
+        flexDirection: 'row',
+        alignItems: 'center',
         marginBottom: 10
     },
+    image: {
+        width: 100,
+        height: 100,
+        marginRight: 20
+    },
+    name: {
+        fontSize: 16,
+        marginBottom: 10
+    },
+    cost: {
+        flexDirection: 'row',
+        alignItems: 'flex-end'
+
+    },
+    price: {
+        fontWeight: 'bold',
+        fontSize: 20
+    },
+    currency: {
+        marginLeft: 5
+    },
     body: {
-        color: '#777777',
-        lineHeight: 20
+        fontSize: 14,
+        fontWeight: '300',
+        lineHeight: 20,
+        color: '#777777'
+
     }
 });

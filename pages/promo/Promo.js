@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 import {ActivityIndicator, ScrollView, FlatList, View, Image, Text, StyleSheet} from 'react-native';
 import fetchData from "../../api/fetchData"
 
-export class Slider extends Component {
-
+export class Promo extends Component {
     constructor(props) {
         super(props);
 

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {StyleSheet, Text, View, FlatList, ScrollView, SafeAreaView} from 'react-native';
 import { Navbar } from './pages/Navbar'
-import { Slider } from './pages/slider/Slider'
+import { Promo } from './pages/promo/Promo'
 import { Products } from './pages/products/Products'
 
 
@@ -17,7 +17,7 @@ export default class App extends Component {
                         showsVerticalScrollIndicator={false}
                         showsHorizontalScrollIndicator={false}
                         contentContainerStyle={{paddingHorizontal: 20}}>
-                        <Slider/>
+                        <Promo/>
                         <Products/>
                     </ScrollView>
                 </SafeAreaView>

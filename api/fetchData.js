@@ -7,5 +7,12 @@ export default {
             .then((response) => response.json())
             .then((json) => json)
             .catch((e) => console.log(e))
+    },
+
+    async fetchProducts() {
+        return fetch(URI + '/products.php')
+            .then((response) => response.json())
+            .then((json) => json)
+            .catch((e) => console.log(e))
     }
 }
