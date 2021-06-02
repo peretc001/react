@@ -1,0 +1,45 @@
+.header {
+  width: 100%;
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 24px 16px;
+  display: flex;
+  align-items: center;
+
+  @include mobile {
+    padding: 10px 16px;
+    justify-content: space-between;
+  }
+
+  .logo {
+    display: block;
+
+    img {
+      max-width: 100%;
+      height: 20px;
+
+      @include mobile {
+        height: 16px;
+      }
+    }
+  }
+
+  .signup {
+    color: $grey;
+    font-size: 14px;
+    margin-left: auto;
+    margin-right: 24px;
+
+    @include mobile {
+      display: none;
+    }
+  }
+
+  .btn-accent {
+    width: 170px;
+
+    @include mobile {
+      width: 120px;
+    }
+  }
+}

@@ -1,0 +1,42 @@
+$dark: #000000;
+$accent: #4E74F5;
+$grey: #999999;
+$placeholder: #e6e6e6;
+$white: #FFFFFF;
+
+
+@mixin mobile-s {
+  @media screen and (max-width: 374.98px) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media screen and (max-width: 576.98px) {
+    @content;
+  }
+}
+
+@mixin mobile-xl {
+  @media screen and (max-width: 767.98px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (max-width: 991.98px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (max-width: 1199.98px) {
+    @content;
+  }
+}
+
+@mixin notebook {
+  @media screen and (max-width: 1299.98px) {
+    @content;
+  }
+}
