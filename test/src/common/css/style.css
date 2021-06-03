@@ -44,15 +44,12 @@ body {
 a, button {
   outline: none; }
 
-h1, h2, h3, h4, h5 {
-  font-size: 32px;
+h1 {
+  font-size: 56px;
   font-weight: bold; }
   @media screen and (max-width: 576.98px) {
-    h1, h2, h3, h4, h5 {
-      font-size: 28px; } }
-  @media screen and (max-width: 374.98px) {
-    h1, h2, h3, h4, h5 {
-      font-size: 24px; } }
+    h1 {
+      font-size: 40px; } }
 
 .btn {
   display: block;
@@ -69,10 +66,14 @@ h1, h2, h3, h4, h5 {
     border: 1px solid #4E74F5;
     background: #4E74F5;
     color: #FFFFFF; }
+    .btn.btn-accent:hover {
+      background: #3661f4; }
   .btn.btn-outline {
     border: 1px solid #e6e6e6;
     background: #FFFFFF;
     color: #000000; }
+    .btn.btn-outline:hover {
+      background: #F6F8FF; }
   .btn.btn-with-icon {
     display: flex;
     align-items: center;
@@ -90,6 +91,31 @@ h1, h2, h3, h4, h5 {
     .btn {
       font-size: 12px;
       padding: 14px; } }
+
+.form .form-group {
+  padding: 8px 0; }
+
+.form input {
+  display: block;
+  width: 100%;
+  padding: 16px 20px;
+  color: #000000;
+  font-weight: bold;
+  border: 1px solid #e6e6e6;
+  border-radius: 12px;
+  outline: none;
+  transition: border-color .3s ease, background-color .3s ease; }
+  .form input.invalid {
+    border-color: #F90043; }
+  .form input.valid {
+    border-color: #e6e6e6;
+    background: #F6F8FF; }
+  .form input::placeholder {
+    color: #e6e6e6; }
+
+.form .btn {
+  margin-top: calc(32px - 8px);
+  border-radius: 64px; }
 
 .header {
   width: 100%;
@@ -130,12 +156,8 @@ h1, h2, h3, h4, h5 {
   padding: 0 16px; }
   .login h1 {
     display: block;
-    font-size: 56px;
     text-align: center;
     margin: 0 0 16px; }
-    @media screen and (max-width: 576.98px) {
-      .login h1 {
-        font-size: 40px; } }
   .login p {
     color: #999999;
     text-align: center;
@@ -148,7 +170,8 @@ h1, h2, h3, h4, h5 {
   .login .social {
     display: flex;
     align-items: center;
-    justify-content: space-between; }
+    justify-content: space-between;
+    margin-bottom: 12px; }
     @media screen and (max-width: 576.98px) {
       .login .social {
         flex-direction: column; } }

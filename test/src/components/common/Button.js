@@ -3,7 +3,7 @@ import google from '../../assets/icons/google.svg'
 
 const Button = ({url, name, type, icon}) => {
 
-    function renderImage (iconType, name) {
+    const renderImage = (iconType, name) => {
         const icons = {
             facebook,
             google

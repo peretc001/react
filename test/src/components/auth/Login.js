@@ -1,4 +1,5 @@
-import Button from "../buttons/Button";
+import Button from "../common/Button";
+import TextField from "../common/TextField";
 
 const Login = () => {
     return (
@@ -10,6 +11,19 @@ const Login = () => {
                 <Button icon="facebook" name="Войти через Facebook" type="btn-outline btn-with-icon"/>
                 <Button icon="google" name="Войти через Google" type="btn-outline btn-with-icon"/>
             </div>
+
+            <p>или</p>
+
+            <form action="" className="form">
+                <div className="form-group">
+                    <TextField type="email" name="login" placeholder="Email" validate="email"/>
+                </div>
+                <div className="form-group">
+                    <TextField type="password" name="password" placeholder="Пароль" validate="password"/>
+                </div>
+
+                <Button name="Войти в аккаунт" type="btn-accent"/>
+            </form>
         </div>
     );
 };

@@ -1,5 +1,5 @@
 import logo from '../assets/logo.svg'
-import Button from "./buttons/Button";
+import Button from "./common/Button";
 
 function Header() {
     return (

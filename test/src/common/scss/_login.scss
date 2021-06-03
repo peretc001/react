@@ -5,13 +5,8 @@
 
   h1 {
     display: block;
-    font-size: 56px;
     text-align: center;
     margin: 0 0 16px;
-
-    @include mobile {
-      font-size: 40px;
-    }
   }
 
   p {
@@ -30,6 +25,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 12px;
 
     @include mobile {
       flex-direction: column;
