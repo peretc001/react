@@ -60,16 +60,36 @@ h1, h2, h3, h4, h5 {
   border-radius: 100px;
   transition: background-color .3s ease;
   cursor: pointer;
-
-  &.btn-outline {
-    border: 1px solid $accent;
-    color: $accent;
-  }
+  position: relative;
 
   &.btn-accent {
     border: 1px solid $accent;
     background: $accent;
     color: $white;
+  }
+
+  &.btn-outline {
+    border: 1px solid $placeholder;
+    background: $white;
+    color: $dark;
+  }
+
+  &.btn-with-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+
+    img {
+      margin-right: 16px;
+
+      @include mobile {
+        position: absolute;
+        left: 16px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
   }
 
   @include mobile {
@@ -80,3 +100,4 @@ h1, h2, h3, h4, h5 {
 
 
 @import "header";
+@import "login";

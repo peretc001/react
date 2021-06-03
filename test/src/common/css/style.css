@@ -63,14 +63,29 @@ h1, h2, h3, h4, h5 {
   padding: 18px;
   border-radius: 100px;
   transition: background-color .3s ease;
-  cursor: pointer; }
-  .btn.btn-outline {
-    border: 1px solid #4E74F5;
-    color: #4E74F5; }
+  cursor: pointer;
+  position: relative; }
   .btn.btn-accent {
     border: 1px solid #4E74F5;
     background: #4E74F5;
     color: #FFFFFF; }
+  .btn.btn-outline {
+    border: 1px solid #e6e6e6;
+    background: #FFFFFF;
+    color: #000000; }
+  .btn.btn-with-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px; }
+    .btn.btn-with-icon img {
+      margin-right: 16px; }
+      @media screen and (max-width: 576.98px) {
+        .btn.btn-with-icon img {
+          position: absolute;
+          left: 16px;
+          top: 50%;
+          transform: translateY(-50%); } }
   @media screen and (max-width: 576.98px) {
     .btn {
       font-size: 12px;
@@ -108,3 +123,38 @@ h1, h2, h3, h4, h5 {
     @media screen and (max-width: 576.98px) {
       .header .btn-accent {
         width: 120px; } }
+
+.login {
+  max-width: 528px;
+  margin: 50px auto 0;
+  padding: 0 16px; }
+  .login h1 {
+    display: block;
+    font-size: 56px;
+    text-align: center;
+    margin: 0 0 16px; }
+    @media screen and (max-width: 576.98px) {
+      .login h1 {
+        font-size: 40px; } }
+  .login p {
+    color: #999999;
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 32px; }
+    @media screen and (max-width: 576.98px) {
+      .login p {
+        font-size: 14px;
+        margin-bottom: 24px; } }
+  .login .social {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+    @media screen and (max-width: 576.98px) {
+      .login .social {
+        flex-direction: column; } }
+    .login .social .btn:first-child {
+      margin-right: 16px; }
+      @media screen and (max-width: 576.98px) {
+        .login .social .btn:first-child {
+          margin-right: 0;
+          margin-bottom: 9px; } }

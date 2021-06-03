@@ -1,5 +1,5 @@
-import logo from '../assets/LiveDune.svg'
-import Button from "./Button";
+import logo from '../assets/logo.svg'
+import Button from "./buttons/Button";
 
 function Header() {
     return (
@@ -9,7 +9,7 @@ function Header() {
             </a>
 
             <p className="signup">У вас нет аккаунта?</p>
-            <Button name="Регистрация" url="/signup"/>
+            <Button url="/signup" name="Регистрация" type="btn-accent"/>
         </header>
     );
 }

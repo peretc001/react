@@ -1,0 +1,49 @@
+.login {
+  max-width: 528px;
+  margin: 50px auto 0;
+  padding: 0 16px;
+
+  h1 {
+    display: block;
+    font-size: 56px;
+    text-align: center;
+    margin: 0 0 16px;
+
+    @include mobile {
+      font-size: 40px;
+    }
+  }
+
+  p {
+    color: $grey;
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 32px;
+
+    @include mobile {
+      font-size: 14px;
+      margin-bottom: 24px;
+    }
+  }
+
+  .social {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include mobile {
+      flex-direction: column;
+    }
+
+    .btn {
+      &:first-child {
+        margin-right: 16px;
+
+        @include mobile {
+          margin-right: 0;
+          margin-bottom: 9px;
+        }
+      }
+    }
+  }
+}
