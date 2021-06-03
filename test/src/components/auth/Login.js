@@ -16,10 +16,10 @@ const Login = () => {
 
             <form action="" className="form">
                 <div className="form-group">
-                    <TextField type="email" name="login" placeholder="Email" validate="email"/>
+                    <TextField type="email" name="login" placeholder="Email" validateType="email"/>
                 </div>
                 <div className="form-group">
-                    <TextField type="password" name="password" placeholder="Пароль" validate="password"/>
+                    <TextField type="password" name="password" placeholder="Пароль" validateType="password"/>
                 </div>
 
                 <Button name="Войти в аккаунт" type="btn-accent"/>
