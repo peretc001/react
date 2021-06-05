@@ -58,6 +58,10 @@
     padding: 0;
     margin: 0 auto;
     color: $accent;
+
+    &.grey {
+      color: $grey;
+    }
   }
 
   &:disabled {

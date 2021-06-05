@@ -92,9 +92,64 @@
 
     .back {
       text-align: center;
+    }
+  }
 
-      .grey {
-        color: $grey;
+  &.confirm {
+    max-width: 100%;
+
+    h1 {
+      margin-bottom: 16px;
+
+      @include mobile {
+        font-size: 24px;
+      }
+    }
+
+    p {
+      line-height: 1.8;
+      max-width: 562px;
+      margin: 0 auto 40px;
+    }
+
+    .btn {
+      max-width: 350px;
+      margin: 0 auto;
+    }
+
+    .remember {
+      margin-top: 24px;
+    }
+  }
+
+  &.send-email {
+    .description {
+      max-width: 674px;
+      margin: 0 auto 40px;
+
+      p {
+        max-width: 100%;
+        margin: 0;
+
+        a {
+          color: $accent;
+          font-weight: bold;
+        }
+      }
+    }
+
+    .form-wrapper {
+      max-width: 420px;
+      margin: 0 auto;
+
+      .btn-accent {
+        max-width: 100%;
+        margin-top: 32px;
+      }
+
+      .back {
+        margin-top: 24px;
+        text-align: center;
       }
     }
   }

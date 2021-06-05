@@ -132,6 +132,8 @@ h1 {
     padding: 0;
     margin: 0 auto;
     color: #4E74F5; }
+    .btn.btn-text.grey {
+      color: #999999; }
   .btn:disabled {
     opacity: .5; }
   @media screen and (max-width: 576.98px) {
@@ -216,8 +218,40 @@ h1 {
         line-height: 1.5; } }
     .page.forgot-password .back {
       text-align: center; }
-      .page.forgot-password .back .grey {
-        color: #999999; }
+  .page.confirm {
+    max-width: 100%; }
+    .page.confirm h1 {
+      margin-bottom: 16px; }
+      @media screen and (max-width: 576.98px) {
+        .page.confirm h1 {
+          font-size: 24px; } }
+    .page.confirm p {
+      line-height: 1.8;
+      max-width: 562px;
+      margin: 0 auto 40px; }
+    .page.confirm .btn {
+      max-width: 350px;
+      margin: 0 auto; }
+    .page.confirm .remember {
+      margin-top: 24px; }
+  .page.send-email .description {
+    max-width: 674px;
+    margin: 0 auto 40px; }
+    .page.send-email .description p {
+      max-width: 100%;
+      margin: 0; }
+      .page.send-email .description p a {
+        color: #4E74F5;
+        font-weight: bold; }
+  .page.send-email .form-wrapper {
+    max-width: 420px;
+    margin: 0 auto; }
+    .page.send-email .form-wrapper .btn-accent {
+      max-width: 100%;
+      margin-top: 32px; }
+    .page.send-email .form-wrapper .back {
+      margin-top: 24px;
+      text-align: center; }
 
 .form .form-group {
   padding: 8px 0;
