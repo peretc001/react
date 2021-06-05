@@ -9,17 +9,21 @@ const TextField = ({type, name, placeholder, validateType, onValidate}) => {
     const checkValidate = (value) => {
         const functions = {
             email: () => isValidEmail(value),
-            password: () => isValidLength(value, 3)
+            password: () => isValidPassword(value, 3),
+            length: () => isValidLength(value, 3)
         }
 
-        return functions[validateType](value)
+        return typeof functions[validateType] === 'function' ? functions[validateType](value) : false
     }
 
     // Проверка на email
     const isValidEmail = (value) => setClass(Number(emailCheckRegex.test(value) && value === 'example@example.com'))
 
     // Проверка на длину
-    const isValidLength = (value, count) => setClass(Number(value.length >= count && value === 'password2021'))
+    const isValidLength = (value, count) => setClass(Number(value.length >= count))
+
+    // Проверка на длину
+    const isValidPassword = (value, count) => setClass(Number(value.length >= count && value === 'password2021'))
 
     // Меняем состояние
     const setClass = (index) => {

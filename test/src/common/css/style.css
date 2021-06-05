@@ -122,7 +122,11 @@ h1 {
           transform: translateY(-50%); } }
   .btn.btn-text {
     display: inline-block;
+    background: transparent;
+    border-radius: 0;
+    border: none;
     width: auto;
+    padding: 0;
     margin: 0 auto;
     color: #4E74F5; }
   .btn:disabled {
@@ -147,29 +151,44 @@ h1 {
         margin-right: 0;
         margin-bottom: 9px; } }
 
-.login {
+.page {
   max-width: 528px;
   margin: 50px auto 0;
   padding: 0 16px; }
-  .login h1 {
+  .page h1 {
     display: block;
     text-align: center;
     margin: 0 0 16px; }
-  .login p {
+  .page p {
     color: #999999;
     text-align: center;
     font-size: 16px;
     margin-bottom: 32px; }
     @media screen and (max-width: 576.98px) {
-      .login p {
+      .page p {
         font-size: 14px;
         margin-bottom: 24px; } }
-    .login p.divider {
+    .page p.divider {
       margin-bottom: 12px; }
-  .login .btn-accent {
+  .page .btn-accent {
     padding: 22px; }
-  .login .remember {
+  .page .remember, .page .promo, .page .policy {
     text-align: center; }
+  .page .promo {
+    margin-bottom: 48px; }
+  .page .policy {
+    margin-top: 24px; }
+    .page .policy p {
+      font-size: 14px;
+      color: #000000;
+      font-weight: bold;
+      margin: 0; }
+      @media screen and (max-width: 576.98px) {
+        .page .policy p {
+          font-size: 12px; } }
+      .page .policy p .btn {
+        padding: 0;
+        margin: 0; }
 
 .form .form-group {
   padding: 8px 0; }

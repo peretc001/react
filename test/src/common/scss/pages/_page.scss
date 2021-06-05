@@ -1,4 +1,4 @@
-.login {
+.page {
   max-width: 528px;
   margin: 50px auto 0;
   padding: 0 16px;
@@ -30,7 +30,31 @@
   }
 
 
-  .remember {
+  .remember, .promo, .policy {
     text-align: center;
+  }
+
+  .promo {
+    margin-bottom: 48px;
+  }
+
+  .policy {
+    margin-top: 24px;
+
+    p {
+      font-size: 14px;
+      color: $dark;
+      font-weight: bold;
+      margin: 0;
+
+      @include mobile {
+        font-size: 12px;
+      }
+
+      .btn {
+        padding: 0;
+        margin: 0;
+      }
+    }
   }
 }

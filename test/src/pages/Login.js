@@ -1,16 +1,13 @@
-import Button from "../components/common/Button";
+import SocialButtons from "../components/common/SocialButtons";
 import LoginForm from "../components/forms/LoginForm";
 
 const Login = () => {
     return (
-        <div className="login">
+        <div className="page">
             <h1>Войти</h1>
             <p>Добро пожаловать, рады видеть вас снова 👋</p>
 
-            <div className="social">
-                <Button icon="facebook" name="Войти через Facebook" type="btn-outline btn-with-icon"/>
-                <Button icon="google" name="Войти через Google" type="btn-outline btn-with-icon"/>
-            </div>
+            <SocialButtons/>
 
             <p className="divider">или</p>
 
