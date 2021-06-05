@@ -46,7 +46,7 @@ h1 {
   }
 }
 
-@import "components/header";
+@import "common/header";
 @import "components/buttons";
-@import "login";
+@import "pages/login";
 @import "components/form";

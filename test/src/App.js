@@ -1,11 +1,9 @@
-import Header from "./components/Header";
-import Login from "./components/auth/Login";
+import AppRouter from "./components/AppRouter";
 
 function App() {
   return (
       <div className="App">
-        <Header/>
-        <Login />
+        <AppRouter/>
       </div>
   );
 }

@@ -1,7 +1,7 @@
-import Button from "../common/Button";
-import LoginForm from "../components/auth/LoginForm";
+import Button from "../components/common/Button";
+import LoginForm from "../components/forms/LoginForm";
 
-const Signup = () => {
+const Login = () => {
     return (
         <div className="login">
             <h1>Войти</h1>
@@ -12,11 +12,11 @@ const Signup = () => {
                 <Button icon="google" name="Войти через Google" type="btn-outline btn-with-icon"/>
             </div>
 
-            <p>или</p>
+            <p className="divider">или</p>
 
             <LoginForm/>
         </div>
     );
 };
 
-export default Signup;
+export default Login;

@@ -1,5 +1,6 @@
 import facebook from '../../assets/icons/facebook.svg'
 import google from '../../assets/icons/google.svg'
+import {Link} from 'react-router-dom'
 
 const Button = ({url, name, type, icon, disabled}) => {
 
@@ -21,7 +22,7 @@ const Button = ({url, name, type, icon, disabled}) => {
         <>
             {
             !!url
-                ? <a href={url} className={'btn ' + type}>{icon ? renderImage(icon, name) : name}</a>
+                ? <Link to={url} className={'btn ' + type}>{icon ? renderImage(icon, name) : name}</Link>
                 : <button className={'btn ' + type} disabled={disabled}>{icon ? renderImage(icon, name) : name}</button>
             }
         </>
