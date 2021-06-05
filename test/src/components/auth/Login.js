@@ -12,7 +12,7 @@ const Login = () => {
                 <Button icon="google" name="Войти через Google" type="btn-outline btn-with-icon"/>
             </div>
 
-            <p>или</p>
+            <p className="divider">или</p>
 
             <LoginForm/>
         </div>

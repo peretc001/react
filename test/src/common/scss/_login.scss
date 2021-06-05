@@ -19,27 +19,18 @@
       font-size: 14px;
       margin-bottom: 24px;
     }
+
+    &.divider {
+      margin-bottom: 12px;
+    }
   }
 
-  .social {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 12px;
+  .btn-accent {
+    padding: 22px;
+  }
 
-    @include mobile {
-      flex-direction: column;
-    }
 
-    .btn {
-      &:first-child {
-        margin-right: 16px;
-
-        @include mobile {
-          margin-right: 0;
-          margin-bottom: 9px;
-        }
-      }
-    }
+  .remember {
+    text-align: center;
   }
 }

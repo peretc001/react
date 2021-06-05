@@ -26,7 +26,7 @@ const TextField = ({type, name, placeholder, validateType, onValidate}) => {
         const classes = ['invalid', 'valid']
 
         // Поднимаем наверх
-        onValidate({ type, name, placeholder, validateType, isValid: classes[index] === 'valid' })
+        onValidate(classes[index] === 'valid')
 
         return setInputClass(classes[index])
     }

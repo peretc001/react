@@ -1,4 +1,4 @@
-@import "fonts";
+@import "common/fonts";
 @import "vars";
 
 * {
@@ -46,103 +46,7 @@ h1 {
   }
 }
 
-.btn {
-  display: block;
-  width: 100%;
-  text-align: center;
-  font-size: 14px;
-  font-weight: bold;
-  padding: 18px;
-  border-radius: 100px;
-  transition: background-color .3s ease, opacity .3s ease;
-  cursor: pointer;
-  position: relative;
-
-  &.btn-accent {
-    border: 1px solid $accent;
-    background: $accent;
-    color: $white;
-
-    &:hover {
-      background: darken($accent, 5%);
-    }
-  }
-
-  &.btn-outline {
-    border: 1px solid $placeholder;
-    background: $white;
-    color: $dark;
-
-    &:hover {
-      background: $hover;
-    }
-  }
-
-  &.btn-with-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 12px;
-
-    img {
-      margin-right: 16px;
-
-      @include mobile {
-        position: absolute;
-        left: 16px;
-        top: 50%;
-        transform: translateY(-50%);
-      }
-    }
-  }
-
-  &:disabled {
-    opacity: .5;
-  }
-
-  @include mobile {
-    font-size: 12px;
-    padding: 14px;
-  }
-}
-
-.form {
-
-  .form-group {
-    padding: 8px 0;
-  }
-
-  input {
-    display: block;
-    width: 100%;
-    padding: 16px 20px;
-    color: $dark;
-    font-weight: bold;
-    border: 1px solid $placeholder;
-    border-radius: 12px;
-    outline: none;
-    transition: border-color .3s ease, background-color .3s ease;
-
-    &.invalid {
-      border-color: #F90043;
-    }
-
-    &.valid {
-      border-color: $placeholder;
-      background: $hover;
-    }
-
-    &::placeholder {
-      color: $placeholder;
-    }
-  }
-
-  .btn {
-    margin-top: calc(32px - 8px);
-    border-radius: 64px;
-  }
-}
-
-
-@import "header";
+@import "components/header";
+@import "components/buttons";
 @import "login";
+@import "components/form";
