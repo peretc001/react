@@ -14,6 +14,7 @@
     border: 1px solid $accent;
     background: $accent;
     color: $white;
+    user-select: none;
 
     &:hover {
       background: darken($accent, 5%);

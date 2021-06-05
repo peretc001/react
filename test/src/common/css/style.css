@@ -53,14 +53,16 @@ h1 {
 
 .header {
   width: 100%;
+  height: 100px;
   max-width: 1360px;
   margin: 0 auto;
-  padding: 24px 16px;
+  padding: 0 16px;
   display: flex;
   align-items: center; }
   @media screen and (max-width: 576.98px) {
     .header {
-      padding: 10px 16px;
+      height: 60px;
+      padding: 0 16px;
       justify-content: space-between; } }
   .header .logo {
     display: block; }
@@ -98,7 +100,8 @@ h1 {
   .btn.btn-accent {
     border: 1px solid #4E74F5;
     background: #4E74F5;
-    color: #FFFFFF; }
+    color: #FFFFFF;
+    user-select: none; }
     .btn.btn-accent:hover {
       background: #3661f4; }
   .btn.btn-outline {
@@ -189,9 +192,45 @@ h1 {
       .page .policy p .btn {
         padding: 0;
         margin: 0; }
+  .page.forgot-password {
+    max-width: 452px; }
+    .page.forgot-password .icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 48px; }
+      .page.forgot-password .icon img {
+        flex: none;
+        width: 100px;
+        height: 100px; }
+    .page.forgot-password h1 {
+      font-size: 32px;
+      margin-bottom: 8px; }
+      @media screen and (max-width: 576.98px) {
+        .page.forgot-password h1 {
+          font-size: 24px; } }
+    @media screen and (max-width: 576.98px) {
+      .page.forgot-password p {
+        max-width: 290px;
+        margin: 0 auto 24px;
+        line-height: 1.5; } }
+    .page.forgot-password .back {
+      text-align: center; }
+      .page.forgot-password .back .grey {
+        color: #999999; }
 
 .form .form-group {
-  padding: 8px 0; }
+  padding: 8px 0;
+  position: relative; }
+  .form .form-group .error {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -10px;
+    color: #FB2424;
+    font-size: 12px;
+    white-space: nowrap;
+    text-align: center; }
 
 .form input {
   display: block;

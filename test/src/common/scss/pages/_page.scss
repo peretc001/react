@@ -29,7 +29,6 @@
     padding: 22px;
   }
 
-
   .remember, .promo, .policy {
     text-align: center;
   }
@@ -54,6 +53,48 @@
       .btn {
         padding: 0;
         margin: 0;
+      }
+    }
+  }
+
+  &.forgot-password {
+    max-width: 452px;
+
+    .icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 48px;
+
+      img {
+        flex: none;
+        width: 100px;
+        height: 100px;
+      }
+    }
+
+    h1 {
+      font-size: 32px;
+      margin-bottom: 8px;
+
+      @include mobile {
+        font-size: 24px;
+      }
+    }
+
+    p {
+      @include mobile {
+        max-width: 290px;
+        margin: 0 auto 24px;
+        line-height: 1.5;
+      }
+    }
+
+    .back {
+      text-align: center;
+
+      .grey {
+        color: $grey;
       }
     }
   }
