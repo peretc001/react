@@ -1,7 +1,7 @@
 import Button from "../common/Button";
-import LoginForm from "./LoginForm";
+import LoginForm from "../components/auth/LoginForm";
 
-const Login = () => {
+const Signup = () => {
     return (
         <div className="login">
             <h1>Войти</h1>
@@ -19,4 +19,4 @@ const Login = () => {
     );
 };
 
-export default Login;
+export default Signup;

@@ -1,7 +1,7 @@
 import facebook from '../../assets/icons/facebook.svg'
 import google from '../../assets/icons/google.svg'
 
-const Button = ({url, name, type, icon}) => {
+const Button = ({url, name, type, icon, disabled}) => {
 
     const renderImage = (iconType, name) => {
         const icons = {
@@ -22,7 +22,7 @@ const Button = ({url, name, type, icon}) => {
             {
             !!url
                 ? <a href={url} className={'btn ' + type}>{icon ? renderImage(icon, name) : name}</a>
-                : <button className={'btn ' + type}>{icon ? renderImage(icon, name) : name}</button>
+                : <button className={'btn ' + type} disabled={disabled}>{icon ? renderImage(icon, name) : name}</button>
             }
         </>
     );
