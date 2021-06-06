@@ -24,36 +24,34 @@ const SignupForm = () => {
     const checkValidatePassword = (value) => setPassword(value)
 
     return (
-        <div>
-            <form action="" className="form" onSubmit={sendForm}>
-                <div className="form-group">
-                    <TextField type="text" name="user" placeholder="Имя" validateType="length" onValidate={checkValidateUser}/>
-                </div>
-                <div className="form-group">
-                    <TextField type="email" name="login" placeholder="Email" validateType="email" onValidate={checkValidateEmail}/>
-                </div>
-                <div className="form-group">
-                    <TextField type="password" name="password" placeholder="Пароль" validateType="length" onValidate={checkValidatePassword}/>
-                </div>
+        <form action="" className="form" onSubmit={sendForm}>
+            <div className="form-group">
+                <TextField type="text" name="user" placeholder="Имя" validateType="length" onValidate={checkValidateUser}/>
+            </div>
+            <div className="form-group">
+                <TextField type="email" name="login" placeholder="Email" validateType="email" onValidate={checkValidateEmail}/>
+            </div>
+            <div className="form-group">
+                <TextField type="password" name="password" placeholder="Пароль" validateType="length" onValidate={checkValidatePassword}/>
+            </div>
 
-                {promoCode
-                    ?
-                        <div className="form-group">
-                            <TextField type="text" name="promo" placeholder="Промокод"/>
-                        </div>
-                    :
-                        <div className="promo">
-                            <span className="btn btn-text" onClick={() => showPromoCode(true)}>У меня есть промокод</span>
-                        </div>
-                }
+            {promoCode
+                ?
+                    <div className="form-group">
+                        <TextField type="text" name="promo" placeholder="Промокод"/>
+                    </div>
+                :
+                    <div className="promo">
+                        <span className="btn btn-text" onClick={() => showPromoCode(true)}>У меня есть промокод</span>
+                    </div>
+            }
 
-                <Button name="Создать аккаунт" type="btn-accent" icon="" disabled={!(user && email && password)}/>
+            <Button name="Создать аккаунт" type="btn-accent" icon="" disabled={!(user && email && password)}/>
 
-                <div className="policy">
-                    <p>Создавая аккаунт, я согласен с <Button url="/policy" name="условиями оферты" type="btn-text" icon=""/></p>
-                </div>
-            </form>
-        </div>
+            <div className="policy">
+                <p>Создавая аккаунт, я согласен с <Button url="/policy" name="условиями оферты" type="btn-text" icon=""/></p>
+            </div>
+        </form>
     );
 };
 
