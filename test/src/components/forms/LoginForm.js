@@ -3,35 +3,51 @@ import Button from "../common/Button";
 import {useState} from "react";
 
 const LoginForm = () => {
-    const [email, setEmail] = useState(false)
-    const [password, setPassword] = useState(false)
+    const [result, setResult] = useState('')
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
+    const [wrongEmail, setWrongEmail] = useState(false)
+    const [wrongPassword, setWrongPassword] = useState(false)
+    const [isValidEmail, setValidEmail] = useState(false)
+    const [isValidPassword, setValidPassword] = useState(false)
 
-    const sendForm = (e) => {
+    const sendForm = async (e) => {
         e.preventDefault()
-        console.log('done')
+
+        await setWrongEmail(email !== 'example@example.com')
+        await setWrongPassword(password !== 'password2021')
+
+        setResult(email === 'example@example.com' && password === 'password2021')
     }
 
-    const checkValidateEmail = (value) => setEmail(value)
-    const checkValidatePassword = (value) => setPassword(value)
+    const getEmail = (value) => setEmail(value)
+    const getPassword = (value) => setPassword(value)
+
+    const checkValidateEmail = (value) => setValidEmail(value)
+    const checkValidatePassword = (value) => setValidPassword(value)
 
     return (
         <div>
             <form action="" className="form" onSubmit={sendForm}>
+                {result ? <div className="done">Здравствуйте!!!</div> : ''}
                 <div className="form-group">
-                    <TextField type="email" name="login" placeholder="Email" validateType="email" onValidate={checkValidateEmail}/>
+                    <TextField type="email" name="login" value={email} placeholder="Email" validateType="email"
+                               onValidate={checkValidateEmail} getValue={getEmail}/>
                 </div>
                 <div className="form-group">
-                    <TextField type="password" name="password" placeholder="Пароль" validateType="password" onValidate={checkValidatePassword}/>
+                    <TextField type="password" name="password" value={password} placeholder="Пароль"
+                               validateType="length" onValidate={checkValidatePassword} getValue={getPassword}/>
                 </div>
 
-                <Button name="Войти в аккаунт" type="btn-accent" icon="" disabled={!(email && password)}/>
+                {wrongEmail || wrongPassword ? <span className="login-error">Неверный е-mail или пароль</span> : ''}
+                <Button name="Войти в аккаунт" type="btn-accent" icon="" disabled={!(isValidEmail && isValidPassword)}/>
 
                 <div className="remember">
                     <Button url="/remember" name="Забыли пароль?" type="btn-text" icon=""/>
                 </div>
             </form>
         </div>
-    );
-};
+    )
+}
 
 export default LoginForm;

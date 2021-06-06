@@ -1,5 +1,15 @@
 .form {
 
+  .done {
+    display: block;
+    color: green;
+    font-size: 14px;
+    font-weight: bold;
+    white-space: nowrap;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
   .form-group {
     padding: 8px 0;
     position: relative;
@@ -32,13 +42,21 @@
     }
 
     &.valid {
-      border-color: $placeholder;
+      border-color: $accent;
       background: $hover;
     }
 
     &::placeholder {
       color: $placeholder;
     }
+  }
+
+  .login-error {
+    display: block;
+    color: #FB2424;
+    font-size: 12px;
+    white-space: nowrap;
+    text-align: center;
   }
 
   .btn {

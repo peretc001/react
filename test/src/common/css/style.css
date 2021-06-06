@@ -253,6 +253,15 @@ h1 {
       margin-top: 24px;
       text-align: center; }
 
+.form .done {
+  display: block;
+  color: green;
+  font-size: 14px;
+  font-weight: bold;
+  white-space: nowrap;
+  text-align: center;
+  margin-bottom: 10px; }
+
 .form .form-group {
   padding: 8px 0;
   position: relative; }
@@ -279,10 +288,17 @@ h1 {
   .form input.invalid {
     border-color: #F90043; }
   .form input.valid {
-    border-color: #e6e6e6;
+    border-color: #4E74F5;
     background: #F6F8FF; }
   .form input::placeholder {
     color: #e6e6e6; }
+
+.form .login-error {
+  display: block;
+  color: #FB2424;
+  font-size: 12px;
+  white-space: nowrap;
+  text-align: center; }
 
 .form .btn {
   margin-top: calc(32px - 8px);

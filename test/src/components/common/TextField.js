@@ -11,7 +11,6 @@ const TextField = ({type, name, placeholder, validateType, onValidate, getValue}
 
         const functions = {
             email: () => isValidEmail(value),
-            password: () => isValidPassword(value, 3),
             length: () => isValidLength(value, 3)
         }
 
@@ -23,9 +22,6 @@ const TextField = ({type, name, placeholder, validateType, onValidate, getValue}
 
     // Проверка на длину
     const isValidLength = (value, count) => setClass(Number(value.length >= count))
-
-    // Проверка на пароль
-    const isValidPassword = (value, count) => setClass(Number(value.length >= count)) //&& value === 'password2021'
 
     // Меняем состояние
     const setClass = (index) => {
