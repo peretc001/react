@@ -1,8 +1,11 @@
 import TextField from "../common/TextField";
 import Button from "../common/Button";
 import {useState} from "react";
+import { useHistory } from "react-router-dom";
 
 const SignupForm = () => {
+    const history = useHistory();
+
     const [user, setUser] = useState(false)
     const [email, setEmail] = useState(false)
     const [password, setPassword] = useState(false)
@@ -10,8 +13,11 @@ const SignupForm = () => {
 
     const sendForm = (e) => {
         e.preventDefault()
-        console.log('done')
+
+        user && email && password ? redirectToPage('/confirm') : console.log('false')
     }
+
+    const redirectToPage = (url) => history.push(url)
 
     const checkValidateUser = (value) => setUser(value)
     const checkValidateEmail = (value) => setEmail(value)
@@ -27,7 +33,7 @@ const SignupForm = () => {
                     <TextField type="email" name="login" placeholder="Email" validateType="email" onValidate={checkValidateEmail}/>
                 </div>
                 <div className="form-group">
-                    <TextField type="password" name="password" placeholder="Пароль" validateType="password" onValidate={checkValidatePassword}/>
+                    <TextField type="password" name="password" placeholder="Пароль" validateType="length" onValidate={checkValidatePassword}/>
                 </div>
 
                 {promoCode

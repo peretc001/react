@@ -14,7 +14,7 @@ const SendEmailForm = () => {
         e.preventDefault()
 
         email === 'example@example.com' ? setError(false) : setError(true)
-        email === 'example@example.com' ? redirectToPage('/') : console.log('false')
+        email === 'example@example.com' ? redirectToPage('/confirm') : console.log('false')
     }
 
     const redirectToPage = (url) => history.push(url)
