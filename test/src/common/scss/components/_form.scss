@@ -29,13 +29,19 @@
   input {
     display: block;
     width: 100%;
+    font-size: 14px;
     padding: 16px 20px;
     color: $dark;
     font-weight: bold;
     border: 1px solid $placeholder;
     border-radius: 12px;
     outline: none;
+    -webkit-appearance: none;
     transition: border-color .3s ease, background-color .3s ease;
+
+    @include desktop {
+      font-size: 16px !important;
+    }
 
     &.invalid {
       border-color: #F90043;

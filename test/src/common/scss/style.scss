@@ -20,17 +20,6 @@ body {
   overflow-x: hidden;
   color: $dark;
   background: $white;
-
-  &.no-scroll {
-    overflow: hidden;
-  }
-}
-
-.container {
-  width: 100%;
-  max-width: 1170px;
-  padding: 0 15px;
-  margin: 0 auto;
 }
 
 a, button {

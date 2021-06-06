@@ -32,14 +32,6 @@ body {
   overflow-x: hidden;
   color: #000000;
   background: #FFFFFF; }
-  body.no-scroll {
-    overflow: hidden; }
-
-.container {
-  width: 100%;
-  max-width: 1170px;
-  padding: 0 15px;
-  margin: 0 auto; }
 
 a, button {
   outline: none; }
@@ -159,7 +151,7 @@ h1 {
 .page {
   max-width: 528px;
   margin: 50px auto 0;
-  padding: 0 16px; }
+  padding: 0 16px 40px; }
   .page h1 {
     display: block;
     text-align: center;
@@ -278,13 +270,18 @@ h1 {
 .form input {
   display: block;
   width: 100%;
+  font-size: 14px;
   padding: 16px 20px;
   color: #000000;
   font-weight: bold;
   border: 1px solid #e6e6e6;
   border-radius: 12px;
   outline: none;
+  -webkit-appearance: none;
   transition: border-color .3s ease, background-color .3s ease; }
+  @media screen and (max-width: 1199.98px) {
+    .form input {
+      font-size: 16px !important; } }
   .form input.invalid {
     border-color: #F90043; }
   .form input.valid {
