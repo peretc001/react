@@ -1,0 +1,95 @@
+@import "src/common/vars";
+
+.mobileMenu {
+  position: absolute;
+  left: 0;
+  top: 48px;
+  width: 320px;
+  height: 400px;
+  background: $white;
+  z-index: 3;
+  padding: 30px 15px 60px 15px;
+
+  @include mobile {
+    height: 100%;
+    min-height: calc(100vh - 30px);
+  }
+
+  .city {
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    margin-bottom: 40px;
+
+    &:before {
+      content: '';
+      flex: none;
+      width: 14px;
+      height: 20px;
+      margin-right: 11px;
+      background: transparent url('~@/assets/icons/location.svg') no-repeat 50% 50% / 100% 100%;
+    }
+
+    span {
+      cursor: pointer;
+    }
+  }
+
+  .action {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+
+    .login,
+    .register {
+      flex: 0 0 48%;
+      display: inline-block;
+      padding: 8px;
+      border-radius: 20px;
+      font-weight: bold;
+      text-align: center;
+      border: 1px solid $accent;
+      cursor: pointer;
+    }
+
+    .login {
+      margin-right: 4%;
+    }
+
+    .register {
+      background: $accent;
+      color: $white;
+    }
+  }
+
+  .menu {
+    margin: 0;
+    padding: 0;
+
+    li {
+      list-style: none;
+      margin: 0;
+      padding: 15px 0;
+
+      &.favorite {
+        background: transparent url('~@/assets/icons/favorite-active.svg') no-repeat 0 50% / 20px 20px;
+        padding-left: 30px;
+      }
+
+      &.general {
+        background: transparent url('~@/assets/icons/home.svg') no-repeat 0 50% / 20px 20px;
+        padding-left: 30px;
+      }
+
+      &.catalog {
+        background: transparent url('~@/assets/icons/catalog.svg') no-repeat 0 50% / 20px 20px;
+        padding-left: 30px;
+      }
+
+      span {
+        cursor: pointer;
+      }
+    }
+  }
+}

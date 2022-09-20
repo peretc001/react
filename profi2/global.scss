@@ -1,0 +1,75 @@
+@import "/src/common/fonts";
+@import "/src/common/vars";
+
+html, body, #__next {
+  height: 100%;
+}
+
+body {
+  font-family: $font;
+  color: $black;
+  font-size: 16px;
+  line-height: 1;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+
+  &.disable-scroll {
+    overflow: hidden;
+    touch-action: none;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#__next {
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  width: 100%;
+  max-width: 1190px;
+  margin: 0 auto;
+  padding: 0 15px;
+
+  @media screen and (max-width: 991px) {
+    padding: 0 16px;
+  }
+}
+
+.d-flex {
+  display: flex;
+  align-items: center;
+}
+
+h1 {
+  font-size: 20px;
+  padding: 0;
+  margin: 0 0 16px;
+
+  @media screen and (max-width: 767px) {
+    font-size: 18px;
+  }
+}
+
+a {
+  color: var(--darkColor);
+  text-decoration: none;
+
+  @media screen and (min-width: 991px) {
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+button, input {
+  outline: none;
+}

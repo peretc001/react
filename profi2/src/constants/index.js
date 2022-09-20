@@ -1,0 +1,10 @@
+export const UI_SIZE_XL = 'uiSizeXl'
+export const UI_SIZE_L = 'uiSizeL'
+export const UI_SIZE_M = 'uiSizeM'
+export const UI_SIZE_S = 'uiSizeS'
+export const UI_SIZE_XS = 'uiSizeXs'
+
+export const THEME_SOLID  = 'THEME_SOLID'
+export const THEME_OUTLINE  = 'THEME_OUTLINE'
+export const THEME_GREEN_OUTLINE  = 'THEME_GREEN_OUTLINE'
+export const THEME_GREEN_SOLID  = 'THEME_GREEN_SOLID'

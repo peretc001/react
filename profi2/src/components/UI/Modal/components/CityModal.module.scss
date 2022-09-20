@@ -1,0 +1,90 @@
+@import "/src/common/vars";
+
+.cityModal {
+  display: flex;
+  flex-direction: column;
+  min-height: 420px;
+
+  .current {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 20px;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 14px;
+      height: 20px;
+      background: transparent url('~@/assets/icons/location.svg') no-repeat 50% 50% / 100% 100%;
+    }
+  }
+
+  .search {
+    display: block;
+    width: 100%;
+    font-size: 16px;
+    padding: 11px;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .search-list {
+    position: relative;
+
+    ul {
+      position: absolute;
+      left: 0;
+      top: -5px;
+      right: 0;
+      background: #fff;
+      margin: 0;
+      padding: 5px 0 0;
+      border-radius: 0 0 6px 6px;
+      border: 1px solid #e5e5e5;
+
+      li {
+        width: 100%;
+        display: block;
+
+        &:hover {
+          background: #f7f7f7;
+        }
+      }
+
+      span {
+        display: block;
+        cursor: pointer;
+        padding: 8px 10px;
+      }
+    }
+  }
+
+  .cities {
+    columns: 2;
+    margin: 0;
+    padding: 0 10px;
+
+    li {
+      width: 100%;
+      display: inline-block;
+      margin-top: 20px;
+
+      @include mobile {
+        font-size: 14px;
+      }
+    }
+
+    span {
+      cursor: pointer;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+}
